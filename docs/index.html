@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Генератор доклада</title>
+    <title>Генератор доклада охраны объекта</title>
     <style>
         /* Стили остаются без изменений */
         body {
@@ -100,7 +100,7 @@
     </style>
 </head>
 <body>
-    <h1>Генератор доклада</h1>
+    <h1>Генератор доклада охраны объекта</h1>
     
     <div class="form-group">
         <label for="composition">Состав (цифрой):</label>
@@ -396,17 +396,17 @@
             
             // Создаем отчеты
             const report1 = `${rank} ${name} | Заступил на охрану объекта ${postName} | Состав - ${composition} чел | Состояние стабильное | Время ${startTimeFormatted} | Доклад окончен`;
-            const report2 = `${rank} ${name} | Заступил на охрану объекта ${postName} | Состав - ${composition} чел | Состояние стабильное | Время ${calculateTimeOnPost()} | Доклад окончен`;
-            const report3 = `${rank} ${name} | Заступил на охрану объекта ${postName} | Состав - ${composition} чел | Состояние стабильное | Время ${currentTimeFormatted} | Доклад окончен`;
+            const report2 = `${rank} ${name} | Охрана объекта ${postName} | Состав - ${composition} чел | Состояние стабильное | Время ${calculateTimeOnPost()} | Доклад окончен`;
+            const report3 = `${rank} ${name} | Прекращаю охрану объекта ${postName} | Состав - ${composition} чел | Состояние стабильное | Время ${currentTimeFormatted} | Доклад окончен`;
             
             // Очищаем контейнер
             const container = document.getElementById('reportContainer');
             container.innerHTML = '';
             
             // Добавляем блоки с отчетами
-            container.appendChild(createReportBlock(report1, '1. Доклад о заступлении на пост'));
-            container.appendChild(createReportBlock(report2, '2. Текущий доклад'));
-            container.appendChild(createReportBlock(report3, '3. Доклад о сдаче поста'));
+            container.appendChild(createReportBlock(report1, '1. Доклад о заступлении на охраны объекта'));
+            container.appendChild(createReportBlock(report2, '2. Доклад о пребывании на объекте'));
+            container.appendChild(createReportBlock(report3, '3. Доклад о сдаче охраны объекта'));
             
             // Показываем индикатор обновления
             const loadingIndicator = document.getElementById('loadingIndicator');
