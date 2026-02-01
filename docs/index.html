@@ -395,9 +395,9 @@
             const currentTimeFormatted = formatTime(currentTime);
             
             // Создаем отчеты
-            const report1 = `${rank} ${name} | Заступил на охрану объекта "${postName}" | Состав - ${composition} чел. | Состояние стабильное | Время ${startTimeFormatted} | Доклад окончен.`;
-            const report2 = `${rank} ${name} | Охрана объекта "${postName}" | Состав - ${composition} чел. | Состояние стабильное | Время ${calculateTimeOnPost()} | Доклад окончен.`;
-            const report3 = `${rank} ${name} | Прекращаю охрану объекта "${postName}" | Состав - ${composition} чел. | Состояние стабильное | Время ${currentTimeFormatted} | Доклад окончен.`;
+            const report1 = `${rank} ${name} | Заступил на охрану объекта "${postName}" | Состав - ${composition} чел. | Состояние: стабильное | Время ${startTimeFormatted} | Доклад окончен.`;
+            const report2 = `${rank} ${name} | Охрана объекта "${postName}" | Состав - ${composition} чел. | Состояние: стабильное | Время ${calculateTimeOnPost()} | Доклад окончен.`;
+            const report3 = `${rank} ${name} | Прекращаю охрану объекта "${postName}" | Состав - ${composition} чел. | Состояние: стабильное | Время ${currentTimeFormatted} | Доклад окончен.`;
             
             // Очищаем контейнер
             const container = document.getElementById('reportContainer');
